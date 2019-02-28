@@ -39,7 +39,7 @@
   </a>
 </p>
 
-> 基于 Vue2.x 封装的 Echarts 图表组件 (封装为react版)
+> 基于 v-charts 封装的 Echarts 图表组件的react版本
 
 ## 特性
 
