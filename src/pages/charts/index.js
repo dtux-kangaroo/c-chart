@@ -8,6 +8,14 @@ import CeHeatMap from '../../../chartPackage/packages/heatmap';
 import CeHistogram from '../../../chartPackage/packages/histogram';
 import CeLiquidfill from '../../../chartPackage/packages/liquidfill';
 import CeMap from '../../../chartPackage/packages/map';
+import CePie from '../../../chartPackage/packages/pie';
+import CeRadar from '../../../chartPackage/packages/radar';
+import CeRing from '../../../chartPackage/packages/ring';
+import CeSankey from '../../../chartPackage/packages/sankey';
+import CeScatter from '../../../chartPackage/packages/scatter';
+import CeTree from '../../../chartPackage/packages/tree';
+import CeWaterfall from '../../../chartPackage/packages/waterfall';
+import CeWordcloud from '../../../chartPackage/packages/wordcloud';
 import './style.scss';
 
 import CHART_DATA from '../../chartData';
@@ -50,7 +58,11 @@ export default class homeCom extends Component{
                                                 params.type=='candle'?<CeCandle is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='funnel'?<CeFunnel is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
                                                 params.type=='gauge'?<CeGauge is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='heatmap'?<CeHeatMap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
                                                 params.type=='histogram'?<CeHistogram is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='liquidfill'?<CeLiquidfill is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                params.type=='map'?<CeMap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:''
+                                                params.type=='map'?<CeMap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='pie'?<CePie is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                params.type=='radar'?<CeRadar is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='ring'?<CeRing is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                params.type=='sankey'?<CeSankey is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='scatter'?<CeScatter is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                params.type=='tree'?<CeTree is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='waterfall'?<CeWaterfall is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                params.type=='wordcloud'?<CeWordcloud is={`ve-${innerType}`} data={res.data} settings={res.settings} />:''
                                             }
                                             
                                         </div>

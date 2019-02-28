@@ -1,6 +1,6 @@
-import CommonChart from '../core'
 import 'echarts-liquidfill'
 
+import CommonChart from '../core'
 import { liquidfill } from './main'
 
 class LiquidfillChart extends CommonChart{
