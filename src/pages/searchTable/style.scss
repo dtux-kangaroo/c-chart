@@ -1,0 +1,23 @@
+.searchTable{
+    margin: 20px;
+    /* 卡片布局 */
+    .ant-card{
+        padding-top:20px;
+    }
+    .ant-card-head{
+        border:none;
+        .ant-card-head-title,.ant-card-extra{
+            padding:0;
+        }
+    }
+    .ant-card-body{
+        padding:0 32px;
+    }
+    /* 搜索框 */
+    .search{
+        width:160px;
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+}

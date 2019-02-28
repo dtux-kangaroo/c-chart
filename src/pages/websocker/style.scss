@@ -1,0 +1,12 @@
+.m-websocker{
+  padding: 20px;
+  .m-receiver{
+    margin-top: 20px;
+    background-color: #fff;
+    height: 600px;
+    overflow: auto;
+    .m-message{
+      padding: 10px;
+    }
+  }
+}

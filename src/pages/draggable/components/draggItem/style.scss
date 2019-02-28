@@ -1,0 +1,69 @@
+.draggItem{
+    width:363px;
+    height:184px;
+    float: left;
+    background:rgba(255,255,255,1);
+    border-radius:2px;
+    border:1px solid rgba(233,233,233,1);
+    margin-right: 23px;
+    margin-bottom: 24px;
+    cursor: move;
+    &.over{
+        box-shadow:0px 2px 8px 0px #1890ff5e;
+    }
+    &:hover{
+        box-shadow:0px 2px 8px 0px rgba(0,0,0,0.09);
+    }
+    .drag_content{
+        height: 136px;
+        padding: 24px;
+        display: flex;
+        .img_wrap{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin-right: 16px;
+            img{
+                display: block;
+                width: 48px;
+                height: 48px;
+            }
+        }
+        .title{
+            height:24px;
+            font-size:16px;
+            color:rgba(0,0,0,0.85);
+            line-height:24px;
+            margin-bottom: 12px;
+        }
+        .text{
+            font-size:14px;
+            color:rgba(0,0,0,0.45);
+            line-height:22px;
+        }
+    }
+    .drag_footer{
+        height:48px;
+        background:rgba(247,249,250,1);
+        border-radius:0px 0px 2px 2px;
+        border-top:1px solid rgba(233,233,233,1);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        .btn{
+            flex:1;
+            text-align: center;
+            height:22px;
+            font-size:14px;
+            color:rgba(0,0,0,0.45);
+            &:hover{
+                color: #108EE9;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1440px) {
+    .draggItem:nth-child(3n){
+        margin-right: 0;
+    }
+}

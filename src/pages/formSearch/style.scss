@@ -1,0 +1,13 @@
+.search-form-bg{
+    width: 90%;
+    margin: 20px auto;
+    padding: 24px;
+    background: #FFF;
+    .search-button-bg{
+        text-align: right;
+        padding: 10px 0;
+        .ant-btn{
+            margin: 0 20px;
+        }
+    }
+}
