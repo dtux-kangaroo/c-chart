@@ -39,23 +39,25 @@ export default class homeCom extends Component{
                 <div className="left-section">
                     <SideNav />
                 </div>
-                <div className="page-item-test">
-                        {
-                            chartData.map((res,index) => {
-                                return(
-                                    <div className="chart-item" key={index}>
-                                        {
-                                            params.type=='line'?<CeLine is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='bar'?<CeBar is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                            params.type=='candle'?<CeCandle is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='funnel'?<CeFunnel is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                            params.type=='gauge'?<CeGauge is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='heatmap'?<CeHeatMap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                            params.type=='histogram'?<CeHistogram is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='liquidfill'?<CeLiquidfill is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                            params.type=='map'?<CeMap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:''
-                                        }
-                                        
-                                    </div>
-                                )
-                            })
-                        }
+                <div className="right-section">
+                    <div className="page-item-test">
+                            {
+                                chartData.map((res,index) => {
+                                    return(
+                                        <div className="chart-item" key={index}>
+                                            {
+                                                params.type=='line'?<CeLine is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='bar'?<CeBar is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                params.type=='candle'?<CeCandle is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='funnel'?<CeFunnel is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                params.type=='gauge'?<CeGauge is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='heatmap'?<CeHeatMap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                params.type=='histogram'?<CeHistogram is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params.type=='liquidfill'?<CeLiquidfill is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                params.type=='map'?<CeMap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:''
+                                            }
+                                            
+                                        </div>
+                                    )
+                                })
+                            }
+                    </div>
                 </div>
             </div>
         )
