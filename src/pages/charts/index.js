@@ -17,7 +17,7 @@ import {
     CeTree,
     CeWaterfall,
     CeWordcloud
- } from '../../../chartPackage/packages';
+ } from '../../chartPackage/packages';
 
 import CodeView from '../../components/codeView';
 import './style.scss';
