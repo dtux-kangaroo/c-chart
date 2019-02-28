@@ -1,7 +1,3 @@
-<p align="center">
-<img src="./examples/favicon.ico" alt="mark text" width="100" height="100">
-</p>
-
 <h3 align="center">c-charts</h3>
 
 <p align="center">
@@ -64,6 +60,45 @@
 ## 快速上手
 
 ```
+import { CeBar } from '../../../chartPackage/packages';
+
+
+export default class CommonPage extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            chartData: {
+              columns: ['date', 'PV'],
+              rows: [
+                { 'date': '01-01', 'PV': 1231 },
+                { 'date': '01-02', 'PV': 1223 },
+                { 'date': '01-03', 'PV': 2123 },
+                { 'date': '01-04', 'PV': 4123 },
+                { 'date': '01-05', 'PV': 3123 },
+                { 'date': '01-06', 'PV': 7123 }
+              ]
+            },
+            settings: {
+              "metrics": [
+                "年龄"
+              ],
+              "dataOrder": {
+                "label": "年龄",
+                "order": "desc"
+              }
+            }
+        }
+    }
+
+    render(){
+      const { chartData, settings } = this.state;
+      return(
+        <div>
+          <CeBar data={ chartData } settings={ settings } />
+        </div>
+      )
+    }
+}
 ```
 
 ## 更新日志

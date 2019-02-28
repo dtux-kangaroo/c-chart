@@ -1,33 +1,36 @@
 import React, { Component } from 'react';
-import CeBar from '../../../chartPackage/packages/bar';
-import CeLine from '../../../chartPackage/packages/line';
-import CeCandle from '../../../chartPackage/packages/candle';
-import CeFunnel from '../../../chartPackage/packages/funnel';
-import CeGauge from '../../../chartPackage/packages/gauge';
-import CeHeatMap from '../../../chartPackage/packages/heatmap';
-import CeHistogram from '../../../chartPackage/packages/histogram';
-import CeLiquidfill from '../../../chartPackage/packages/liquidfill';
-import CeMap from '../../../chartPackage/packages/map';
-import CePie from '../../../chartPackage/packages/pie';
-import CeRadar from '../../../chartPackage/packages/radar';
-import CeRing from '../../../chartPackage/packages/ring';
-import CeSankey from '../../../chartPackage/packages/sankey';
-import CeScatter from '../../../chartPackage/packages/scatter';
-import CeTree from '../../../chartPackage/packages/tree';
-import CeWaterfall from '../../../chartPackage/packages/waterfall';
-import CeWordcloud from '../../../chartPackage/packages/wordcloud';
+import { 
+    CeBar,
+    CeLine,
+    CeCandle,
+    CeFunnel,
+    CeGauge,
+    CeHeatMap,
+    CeHistogram,
+    CeLiquidfill,
+    CeMap,
+    CePie,
+    CeRadar,
+    CeRing,
+    CeSankey,
+    CeScatter,
+    CeTree,
+    CeWaterfall,
+    CeWordcloud
+ } from '../../../chartPackage/packages';
 
 import CodeView from '../../components/codeView';
 import './style.scss';
 
 import CHART_DATA from '../../chartData';
 import SideNav from '../../components/sideNav';
+import { from } from 'rxjs';
 
 export default class homeCom extends Component{
     constructor(props){
         super(props)
         this.state = {
-            chartData: [],
+            chartData: {},
             type: null,
             innerType: null,
         }
