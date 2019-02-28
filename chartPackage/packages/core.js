@@ -271,7 +271,7 @@ export default class BarChart extends Component{
         echarts && echarts.resize() 
     }
 
-    optionsHandler (options) {
+    optionsHandler = (options) => {
         const { _store, echarts, _once } = this.state;
         const { legendPosition, animation, markArea, markLine, markPoint,
              extend, afterConfig, settings, notSetUnchange, log, judgeWidth, afterSetOption, afterSetOptionOnce } = this.props;
@@ -285,7 +285,6 @@ export default class BarChart extends Component{
           }
         }
         // color
-        console.log(options)
         options.color = chartColor
         // echarts self settings
         ECHARTS_SETTINGS.forEach(setting => {
