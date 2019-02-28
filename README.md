@@ -2,7 +2,7 @@
 <img src="./examples/favicon.ico" alt="mark text" width="100" height="100">
 </p>
 
-<h3 align="center">v-charts</h3>
+<h3 align="center">c-charts</h3>
 
 <p align="center">
   <a href="https://travis-ci.org/ElemeFE/v-charts">
