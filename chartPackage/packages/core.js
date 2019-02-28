@@ -28,7 +28,7 @@ import setAnimation from '../modules/animation'
 
 export default class BarChart extends Component{
     static defaultProps = {
-		data: {} ,
+		    data: {} ,
         settings: {},
         width: 'auto',
         height: '400px',

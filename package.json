@@ -29,6 +29,7 @@
     "monaco-editor": "^0.14.3",
     "numerify": "^1.2.9",
     "object-assign": "^4.1.1",
+    "prismjs": "^1.15.0",
     "prop-types": "^15.7.2",
     "react": "^16.4.2",
     "react-codemirror2": "^5.1.0",
