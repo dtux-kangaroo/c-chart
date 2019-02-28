@@ -28,7 +28,7 @@ class CodeView extends Component{
         const content = this.props.json
           ? JSON.stringify(this.props.content, null, 2)
           : this.props.content
-        return Prism.highlight(content, Prism.languages[this.props.lang])
+        return Prism.highlight(content, Prism.languages['javascript'])
     }
 
     cls = () => {
@@ -37,12 +37,14 @@ class CodeView extends Component{
     }
 
     render(){
-        const innerCode = this.innerCode;
-        const cls = this.cls;
+        const innerCode = this.innerCode();
         return(
-            <pre className={cls}>
-                <code className={cls} v-html={innerCode}></code>
+            <pre className='language-javascript'>
+                <code className='language-javascript' dangerouslySetInnerHTML={{__html:innerCode}}>
+                </code>
             </pre>
         )
     }
 }
+
+export default CodeView;

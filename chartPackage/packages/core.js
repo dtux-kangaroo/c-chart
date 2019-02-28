@@ -220,7 +220,7 @@ export default class BarChart extends Component{
     canvasStyle () {
       const { width, height } = this.props;
       return {
-          width: 1200,
+          width: 799,
           height,
           position: 'relative'
       }
