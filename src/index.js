@@ -1,22 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux';
-import createHistory from 'history/createBrowserHistory'
-//import createHistory from "history/createHashHistory";
-import Routers from './router'
-import "assets/styles/index.scss";
-import store from './store'
-export const history = createHistory();
+export { default as BarChart } from './chartPackage/packages/bar';
+export { default as Candle } from './chartPackage/packages/candle';
+export { default as Funnel } from './chartPackage/packages/funnel';
+export { default as Guage } from './chartPackage/packages/gauge';
 
-const render = Component =>
-    ReactDOM.render(
-      <Provider store={ store }>
-      <Component />
-      </Provider>,
-       document.getElementById('root')
-    )
-render(Routers)
+export { default as Heatmap } from './chartPackage/packages/heatmap';
+export { default as Histogram } from './chartPackage/packages/histogram';
+export { default as Line } from './chartPackage/packages/line';
+export { default as Liquidfill } from './chartPackage/packages/liquidfill';
 
-if(module.hot) {
-  module.hot.accept();
-}
+export { default as Map } from './chartPackage/packages/map';
+export { default as Pie } from './chartPackage/packages/pie';
+export { default as Radar } from './chartPackage/packages/radar';
+export { default as Ring } from './chartPackage/packages/ring';
+
+export { default as Sankey } from './chartPackage/packages/sankey';
+export { default as Scatter } from './chartPackage/packages/scatter';
+export { default as Tree } from './chartPackage/packages/tree';
+export { default as Waterfall } from './chartPackage/packages/waterfall';
+
+export { default as Wordcloud } from './chartPackage/packages/wordcloud';
