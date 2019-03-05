@@ -36,6 +36,9 @@ export default class homeCom extends Component{
     }
 
     componentWillMount(){
+        if(location.pathname == '/'){
+            window.location.href = '/chart/bar';
+        }
     }
 
     componentDidMount(){

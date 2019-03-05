@@ -70,7 +70,7 @@ module.exports = {
   },
   devServer: {
     host: '127.0.0.1',
-    port: '9091',
+    port: '9092',
     contentBase: buildPath,
     publicPath: "/",
     historyApiFallback: true,
