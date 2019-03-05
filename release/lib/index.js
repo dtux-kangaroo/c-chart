@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _bar = require('./chartPackage/packages/bar');
 
-Object.defineProperty(exports, 'BarChart', {
+Object.defineProperty(exports, 'KoBar', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_bar).default;
@@ -15,7 +15,7 @@ Object.defineProperty(exports, 'BarChart', {
 
 var _candle = require('./chartPackage/packages/candle');
 
-Object.defineProperty(exports, 'Candle', {
+Object.defineProperty(exports, 'KoCandle', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_candle).default;
@@ -24,7 +24,7 @@ Object.defineProperty(exports, 'Candle', {
 
 var _funnel = require('./chartPackage/packages/funnel');
 
-Object.defineProperty(exports, 'Funnel', {
+Object.defineProperty(exports, 'KoFunnel', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_funnel).default;
@@ -33,7 +33,7 @@ Object.defineProperty(exports, 'Funnel', {
 
 var _gauge = require('./chartPackage/packages/gauge');
 
-Object.defineProperty(exports, 'Guage', {
+Object.defineProperty(exports, 'KoGuage', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_gauge).default;
@@ -42,7 +42,7 @@ Object.defineProperty(exports, 'Guage', {
 
 var _heatmap = require('./chartPackage/packages/heatmap');
 
-Object.defineProperty(exports, 'Heatmap', {
+Object.defineProperty(exports, 'KoHeatmap', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_heatmap).default;
@@ -51,7 +51,7 @@ Object.defineProperty(exports, 'Heatmap', {
 
 var _histogram = require('./chartPackage/packages/histogram');
 
-Object.defineProperty(exports, 'Histogram', {
+Object.defineProperty(exports, 'KoHistogram', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_histogram).default;
@@ -60,7 +60,7 @@ Object.defineProperty(exports, 'Histogram', {
 
 var _line = require('./chartPackage/packages/line');
 
-Object.defineProperty(exports, 'Line', {
+Object.defineProperty(exports, 'KoLine', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_line).default;
@@ -69,7 +69,7 @@ Object.defineProperty(exports, 'Line', {
 
 var _liquidfill = require('./chartPackage/packages/liquidfill');
 
-Object.defineProperty(exports, 'Liquidfill', {
+Object.defineProperty(exports, 'KoLiquidfill', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_liquidfill).default;
@@ -78,7 +78,7 @@ Object.defineProperty(exports, 'Liquidfill', {
 
 var _map = require('./chartPackage/packages/map');
 
-Object.defineProperty(exports, 'Map', {
+Object.defineProperty(exports, 'KoMap', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_map).default;
@@ -87,7 +87,7 @@ Object.defineProperty(exports, 'Map', {
 
 var _pie = require('./chartPackage/packages/pie');
 
-Object.defineProperty(exports, 'Pie', {
+Object.defineProperty(exports, 'KoPie', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_pie).default;
@@ -96,7 +96,7 @@ Object.defineProperty(exports, 'Pie', {
 
 var _radar = require('./chartPackage/packages/radar');
 
-Object.defineProperty(exports, 'Radar', {
+Object.defineProperty(exports, 'KoRadar', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_radar).default;
@@ -105,7 +105,7 @@ Object.defineProperty(exports, 'Radar', {
 
 var _ring = require('./chartPackage/packages/ring');
 
-Object.defineProperty(exports, 'Ring', {
+Object.defineProperty(exports, 'KoRing', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_ring).default;
@@ -114,7 +114,7 @@ Object.defineProperty(exports, 'Ring', {
 
 var _sankey = require('./chartPackage/packages/sankey');
 
-Object.defineProperty(exports, 'Sankey', {
+Object.defineProperty(exports, 'KoSankey', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_sankey).default;
@@ -123,7 +123,7 @@ Object.defineProperty(exports, 'Sankey', {
 
 var _scatter = require('./chartPackage/packages/scatter');
 
-Object.defineProperty(exports, 'Scatter', {
+Object.defineProperty(exports, 'KoScatter', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_scatter).default;
@@ -132,7 +132,7 @@ Object.defineProperty(exports, 'Scatter', {
 
 var _tree = require('./chartPackage/packages/tree');
 
-Object.defineProperty(exports, 'Tree', {
+Object.defineProperty(exports, 'KoTree', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_tree).default;
@@ -141,7 +141,7 @@ Object.defineProperty(exports, 'Tree', {
 
 var _waterfall = require('./chartPackage/packages/waterfall');
 
-Object.defineProperty(exports, 'Waterfall', {
+Object.defineProperty(exports, 'KoWaterfall', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_waterfall).default;
@@ -150,7 +150,7 @@ Object.defineProperty(exports, 'Waterfall', {
 
 var _wordcloud = require('./chartPackage/packages/wordcloud');
 
-Object.defineProperty(exports, 'Wordcloud', {
+Object.defineProperty(exports, 'KoWordcloud', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_wordcloud).default;

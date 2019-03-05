@@ -22,7 +22,7 @@ npm install ko-charts --save
 We are die hard fans of ECMAScript 6, so we recommend you writing code in modern javascript.
 
 ```js
-import { Bar } from 'ko-charts ';
+import { KoBar } from 'ko-charts ';
 ```
 
 ## Contributing
