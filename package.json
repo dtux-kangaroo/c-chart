@@ -9,7 +9,7 @@
     "start": "npm run dev:server",
     "com:build": "./build/com-build.sh",
     "dev:server": "webpack-dev-server --progress --colors --config ./build/dev-server.js",
-    "prod:build": "webpack --bail --progress --profile --config ./build/prod-build.js",
+    "prod:build": "rm -f -r dist && webpack --bail --progress --profile --config ./build/prod-build.js",
     "push:pages": "./build/push-pages.sh",
     "preview": "pushstate-server ./dist 1234"
   },
