@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dtux-kangaroo/ko-chart.git"
+    "url": "git+https://github.com/dtux-kangaroo/ko-charts.git"
   },
   "keywords": [
     "KO",
@@ -25,9 +25,9 @@
   "author": "dtux",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dtux-kangaroo/ko-chart/issues"
+    "url": "https://github.com/dtux-kangaroo/ko-charts/issues"
   },
-  "homepage": "https://github.comd/dtux-kangaroo/ko-chart.git",
+  "homepage": "https://github.comd/dtux-kangaroo/ko-charts.git",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",

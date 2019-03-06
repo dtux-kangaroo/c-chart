@@ -15,7 +15,7 @@ module.exports = {
   context:path.resolve(__dirname, '../preview'),
   output: {
     path: buildPath,
-    publicPath: "/ko-chart/",
+    publicPath: "/ko-charts/",
     chunkFilename: "js/[name].[hash].js",
     filename: "js/[name].[hash].js",
   },
