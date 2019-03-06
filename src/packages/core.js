@@ -22,9 +22,9 @@ import {
     STATIC_PROPS,
     ECHARTS_SETTINGS
   } from './constants'
-import setExtend from '../modules/extend'
-import setMark from '../modules/mark'
-import setAnimation from '../modules/animation'
+import setExtend from '../utils/extend'
+import setMark from '../utils/mark'
+import setAnimation from '../utils/animation'
 
 export default class BarChart extends Component{
     static defaultProps = {

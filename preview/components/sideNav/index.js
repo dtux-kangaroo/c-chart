@@ -1,5 +1,5 @@
 import React, { Component, Fragment }  from 'react';
-import chartData from '../../chartData/index';
+import chartData from '../../mock';
 import { mapKeys } from 'lodash';
 import './style.scss';
 

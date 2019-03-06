@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import { 
-    CeBar,
-    CeLine,
-    CeCandle,
-    CeFunnel,
-    CeGauge,
-    CeHeatMap,
-    CeHistogram,
-    CeLiquidfill,
-    CeMap,
-    CePie,
-    CeRadar,
-    CeRing,
-    CeSankey,
-    CeScatter,
-    CeTree,
-    CeWaterfall,
-    CeWordcloud
- } from '../../chartPackage/packages';
+    KoBar,
+    KoCandle,
+    KoFunnel,
+    KoGuage,
+    KoHeatmap,
+    KoHistogram,
+    KoLine,
+    KoLiquidfill,
+    KoMap,
+    KoPie,
+    KoRadar,
+    KoRing,
+    KoSankey,
+    KoScatter,
+    KoTree,
+    KoWaterfall,
+    KoWordcloud
+ } from '../../../src/index';
 
 import CodeView from '../../components/codeView';
 import './style.scss';
 
-import CHART_DATA from '../../chartData';
+import CHART_DATA from '../../mock';
 import SideNav from '../../components/sideNav';
 
 export default class homeCom extends Component{
@@ -45,7 +45,8 @@ export default class homeCom extends Component{
     }
 
     render(){
-        const params = (window.location.pathname.split('/'))[2];
+        const len = window.location.href.split('/').length;
+        const params = window.location.href.split('/')[len-1];
         const chartData = CHART_DATA[params].data;
         const innerType = CHART_DATA[params].type;
         
@@ -62,15 +63,15 @@ export default class homeCom extends Component{
                                         <div className="chart-item" key={index}>
                                             <div className="chart-part">
                                                 {
-                                                    params=='line'?<CeLine is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='bar'?<CeBar is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='candle'?<CeCandle is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='funnel'?<CeFunnel is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='gauge'?<CeGauge is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='heatmap'?<CeHeatMap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='histogram'?<CeHistogram is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='liquidfill'?<CeLiquidfill is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='map'?<CeMap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='pie'?<CePie is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='radar'?<CeRadar is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='ring'?<CeRing is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='sankey'?<CeSankey is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='scatter'?<CeScatter is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='tree'?<CeTree is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='waterfall'?<CeWaterfall is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='wordcloud'?<CeWordcloud is={`ve-${innerType}`} data={res.data} settings={res.settings} />:''
+                                                    params=='line'?<KoLine is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='bar'?<KoBar is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    params=='candle'?<KoCandle is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='funnel'?<KoFunnel is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    params=='gauge'?<KoGuage is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='heatmap'?<KoHeatmap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    params=='histogram'?<KoHistogram is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='liquidfill'?<KoLiquidfill is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    params=='map'?<KoMap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='pie'?<KoPie is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    params=='radar'?<KoRadar is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='ring'?<KoRing is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    params=='sankey'?<KoSankey is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='scatter'?<KoScatter is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    params=='tree'?<KoTree is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='waterfall'?<KoWaterfall is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    params=='wordcloud'?<KoWordcloud is={`ve-${innerType}`} data={res.data} settings={res.settings} />:''
                                                 }
                                             </div>
                                             <div className="code-view">
