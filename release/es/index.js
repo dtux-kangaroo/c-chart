@@ -1,21 +1,21 @@
-export { default as KoBar } from './chartPackage/packages/bar';
-export { default as KoCandle } from './chartPackage/packages/candle';
-export { default as KoFunnel } from './chartPackage/packages/funnel';
-export { default as KoGuage } from './chartPackage/packages/gauge';
+export { default as KoBar } from './packages/bar';
+export { default as KoCandle } from './packages/candle';
+export { default as KoFunnel } from './packages/funnel';
+export { default as KoGuage } from './packages/gauge';
 
-export { default as KoHeatmap } from './chartPackage/packages/heatmap';
-export { default as KoHistogram } from './chartPackage/packages/histogram';
-export { default as KoLine } from './chartPackage/packages/line';
-export { default as KoLiquidfill } from './chartPackage/packages/liquidfill';
+export { default as KoHeatmap } from './packages/heatmap';
+export { default as KoHistogram } from './packages/histogram';
+export { default as KoLine } from './packages/line';
+export { default as KoLiquidfill } from './packages/liquidfill';
 
-export { default as KoMap } from './chartPackage/packages/map';
-export { default as KoPie } from './chartPackage/packages/pie';
-export { default as KoRadar } from './chartPackage/packages/radar';
-export { default as KoRing } from './chartPackage/packages/ring';
+export { default as KoMap } from './packages/map';
+export { default as KoPie } from './packages/pie';
+export { default as KoRadar } from './packages/radar';
+export { default as KoRing } from './packages/ring';
 
-export { default as KoSankey } from './chartPackage/packages/sankey';
-export { default as KoScatter } from './chartPackage/packages/scatter';
-export { default as KoTree } from './chartPackage/packages/tree';
-export { default as KoWaterfall } from './chartPackage/packages/waterfall';
+export { default as KoSankey } from './packages/sankey';
+export { default as KoScatter } from './packages/scatter';
+export { default as KoTree } from './packages/tree';
+export { default as KoWaterfall } from './packages/waterfall';
 
-export { default as KoWordcloud } from './chartPackage/packages/wordcloud';
+export { default as KoWordcloud } from './packages/wordcloud';

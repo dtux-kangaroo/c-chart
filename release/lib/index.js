@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _bar = require('./chartPackage/packages/bar');
+var _bar = require('./packages/bar');
 
 Object.defineProperty(exports, 'KoBar', {
   enumerable: true,
@@ -13,7 +13,7 @@ Object.defineProperty(exports, 'KoBar', {
   }
 });
 
-var _candle = require('./chartPackage/packages/candle');
+var _candle = require('./packages/candle');
 
 Object.defineProperty(exports, 'KoCandle', {
   enumerable: true,
@@ -22,7 +22,7 @@ Object.defineProperty(exports, 'KoCandle', {
   }
 });
 
-var _funnel = require('./chartPackage/packages/funnel');
+var _funnel = require('./packages/funnel');
 
 Object.defineProperty(exports, 'KoFunnel', {
   enumerable: true,
@@ -31,7 +31,7 @@ Object.defineProperty(exports, 'KoFunnel', {
   }
 });
 
-var _gauge = require('./chartPackage/packages/gauge');
+var _gauge = require('./packages/gauge');
 
 Object.defineProperty(exports, 'KoGuage', {
   enumerable: true,
@@ -40,7 +40,7 @@ Object.defineProperty(exports, 'KoGuage', {
   }
 });
 
-var _heatmap = require('./chartPackage/packages/heatmap');
+var _heatmap = require('./packages/heatmap');
 
 Object.defineProperty(exports, 'KoHeatmap', {
   enumerable: true,
@@ -49,7 +49,7 @@ Object.defineProperty(exports, 'KoHeatmap', {
   }
 });
 
-var _histogram = require('./chartPackage/packages/histogram');
+var _histogram = require('./packages/histogram');
 
 Object.defineProperty(exports, 'KoHistogram', {
   enumerable: true,
@@ -58,7 +58,7 @@ Object.defineProperty(exports, 'KoHistogram', {
   }
 });
 
-var _line = require('./chartPackage/packages/line');
+var _line = require('./packages/line');
 
 Object.defineProperty(exports, 'KoLine', {
   enumerable: true,
@@ -67,7 +67,7 @@ Object.defineProperty(exports, 'KoLine', {
   }
 });
 
-var _liquidfill = require('./chartPackage/packages/liquidfill');
+var _liquidfill = require('./packages/liquidfill');
 
 Object.defineProperty(exports, 'KoLiquidfill', {
   enumerable: true,
@@ -76,7 +76,7 @@ Object.defineProperty(exports, 'KoLiquidfill', {
   }
 });
 
-var _map = require('./chartPackage/packages/map');
+var _map = require('./packages/map');
 
 Object.defineProperty(exports, 'KoMap', {
   enumerable: true,
@@ -85,7 +85,7 @@ Object.defineProperty(exports, 'KoMap', {
   }
 });
 
-var _pie = require('./chartPackage/packages/pie');
+var _pie = require('./packages/pie');
 
 Object.defineProperty(exports, 'KoPie', {
   enumerable: true,
@@ -94,7 +94,7 @@ Object.defineProperty(exports, 'KoPie', {
   }
 });
 
-var _radar = require('./chartPackage/packages/radar');
+var _radar = require('./packages/radar');
 
 Object.defineProperty(exports, 'KoRadar', {
   enumerable: true,
@@ -103,7 +103,7 @@ Object.defineProperty(exports, 'KoRadar', {
   }
 });
 
-var _ring = require('./chartPackage/packages/ring');
+var _ring = require('./packages/ring');
 
 Object.defineProperty(exports, 'KoRing', {
   enumerable: true,
@@ -112,7 +112,7 @@ Object.defineProperty(exports, 'KoRing', {
   }
 });
 
-var _sankey = require('./chartPackage/packages/sankey');
+var _sankey = require('./packages/sankey');
 
 Object.defineProperty(exports, 'KoSankey', {
   enumerable: true,
@@ -121,7 +121,7 @@ Object.defineProperty(exports, 'KoSankey', {
   }
 });
 
-var _scatter = require('./chartPackage/packages/scatter');
+var _scatter = require('./packages/scatter');
 
 Object.defineProperty(exports, 'KoScatter', {
   enumerable: true,
@@ -130,7 +130,7 @@ Object.defineProperty(exports, 'KoScatter', {
   }
 });
 
-var _tree = require('./chartPackage/packages/tree');
+var _tree = require('./packages/tree');
 
 Object.defineProperty(exports, 'KoTree', {
   enumerable: true,
@@ -139,7 +139,7 @@ Object.defineProperty(exports, 'KoTree', {
   }
 });
 
-var _waterfall = require('./chartPackage/packages/waterfall');
+var _waterfall = require('./packages/waterfall');
 
 Object.defineProperty(exports, 'KoWaterfall', {
   enumerable: true,
@@ -148,7 +148,7 @@ Object.defineProperty(exports, 'KoWaterfall', {
   }
 });
 
-var _wordcloud = require('./chartPackage/packages/wordcloud');
+var _wordcloud = require('./packages/wordcloud');
 
 Object.defineProperty(exports, 'KoWordcloud', {
   enumerable: true,
