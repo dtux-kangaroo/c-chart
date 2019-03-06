@@ -8,15 +8,11 @@ class SideNav extends Component{
         super(props)
     }
 
-    pageJump(url){
-        self.location.href= `${window.location.origin}${url}`;
-    }
-
     render(){
         const menus = Object.keys(chartData).map(key => {
             return {
               name: chartData[key].name,
-              url: `/chart/${chartData[key].type}`
+              url: `${chartData[key].type}`
             }
         });
         
@@ -28,7 +24,7 @@ class SideNav extends Component{
                             menus.map((res,index) => {
                                 return(
                                     <li className="sidebar-li" key={index}>
-                                        <a href="javascript:void(0);" onClick={this.pageJump.bind(this,res.url)}>{res.name}</a>
+                                        <a href={`#/${res.url}`}>{res.name}</a>
                                     </li>
                                 )
                             })

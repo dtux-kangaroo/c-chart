@@ -29,31 +29,36 @@ export default class homeCom extends Component{
     constructor(props){
         super(props)
         this.state = {
-            chartData: {},
-            type: null,
-            innerType: null,
+            urlHash: ''
         }
     }
 
     componentWillMount(){
-        if(location.pathname == '/'){
-            window.location.href = '/chart/bar';
+        if(location.hash == ''){
+            window.location.href = '#/bar';
         }
+
+        window.addEventListener("hashchange", () => {
+            window.scrollTo(0, 0);
+      
+            this.urlChange();
+          }, false);
     }
 
     componentWillReceiveProps(newProps){
-        console.log(newProps)
     }
 
     componentDidMount(){
-        console.log(this.props)
+    }
+
+    urlChange(e){
+        this.setState({urlHash: location.hash.split('#/')[1]}) 
     }
 
     render(){
-        const len = window.location.href.split('/').length;
-        const params = window.location.href.split('/')[len-1];
-        const chartData = CHART_DATA[params].data;
-        const innerType = CHART_DATA[params].type;
+        const { urlHash } = this.state;
+        const chartData = CHART_DATA[urlHash?urlHash:'bar'].data;
+        const innerType = CHART_DATA[urlHash?urlHash:'bar'].type;
         
         return(
             <div className="main-container">
@@ -68,15 +73,15 @@ export default class homeCom extends Component{
                                         <div className="chart-item" key={index}>
                                             <div className="chart-part">
                                                 {
-                                                    params=='line'?<KoLine is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='bar'?<KoBar is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='candle'?<KoCandle is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='funnel'?<KoFunnel is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='gauge'?<KoGuage is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='heatmap'?<KoHeatmap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='histogram'?<KoHistogram is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='liquidfill'?<KoLiquidfill is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='map'?<KoMap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='pie'?<KoPie is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='radar'?<KoRadar is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='ring'?<KoRing is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='sankey'?<KoSankey is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='scatter'?<KoScatter is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='tree'?<KoTree is={`ve-${innerType}`} data={res.data} settings={res.settings} />:params=='waterfall'?<KoWaterfall is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
-                                                    params=='wordcloud'?<KoWordcloud is={`ve-${innerType}`} data={res.data} settings={res.settings} />:''
+                                                    urlHash=='line'?<KoLine is={`ve-${innerType}`} data={res.data} settings={res.settings} />:urlHash=='bar'?<KoBar is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    urlHash=='candle'?<KoCandle is={`ve-${innerType}`} data={res.data} settings={res.settings} />:urlHash=='funnel'?<KoFunnel is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    urlHash=='gauge'?<KoGuage is={`ve-${innerType}`} data={res.data} settings={res.settings} />:urlHash=='heatmap'?<KoHeatmap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    urlHash=='histogram'?<KoHistogram is={`ve-${innerType}`} data={res.data} settings={res.settings} />:urlHash=='liquidfill'?<KoLiquidfill is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    urlHash=='map'?<KoMap is={`ve-${innerType}`} data={res.data} settings={res.settings} />:urlHash=='pie'?<KoPie is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    urlHash=='radar'?<KoRadar is={`ve-${innerType}`} data={res.data} settings={res.settings} />:urlHash=='ring'?<KoRing is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    urlHash=='sankey'?<KoSankey is={`ve-${innerType}`} data={res.data} settings={res.settings} />:urlHash=='scatter'?<KoScatter is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    urlHash=='tree'?<KoTree is={`ve-${innerType}`} data={res.data} settings={res.settings} />:urlHash=='waterfall'?<KoWaterfall is={`ve-${innerType}`} data={res.data} settings={res.settings} />:
+                                                    urlHash=='wordcloud'?<KoWordcloud is={`ve-${innerType}`} data={res.data} settings={res.settings} />:<KoBar is={`ve-${innerType}`} data={res.data} settings={res.settings} />
                                                 }
                                             </div>
                                             <div className="code-view">
