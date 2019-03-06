@@ -41,7 +41,12 @@ export default class homeCom extends Component{
         }
     }
 
+    componentWillReceiveProps(newProps){
+        console.log(newProps)
+    }
+
     componentDidMount(){
+        console.log(this.props)
     }
 
     render(){
