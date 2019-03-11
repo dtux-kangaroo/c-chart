@@ -196,7 +196,6 @@ var BarChart = function (_Component) {
   };
 
   BarChart.prototype.componentDidMount = function componentDidMount() {
-    console.log();
     this.init();
   };
 
@@ -224,7 +223,7 @@ var BarChart = function (_Component) {
       this.resize();
     }
     if (settings != newProps.settings) {
-      if (newProps.settings.type && this.chartLib) this.state.chartHandler = this.chartLib[newProps.settings.type];
+      if (newProps.settings.type && this.state.chartLib) this.state.chartHandler = this.state.chartLib[newProps.settings.type];
       this.changeHandler();
     }
     if (events != newProps.events) {
@@ -259,7 +258,7 @@ var BarChart = function (_Component) {
         height = _props4.height;
 
     return {
-      width: 799,
+      width: width,
       height: height,
       position: 'relative'
     };

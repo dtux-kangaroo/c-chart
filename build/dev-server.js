@@ -9,8 +9,7 @@ module.exports = {
   context:path.resolve(__dirname, '../preview'),
   entry:{
     vendor: ['react', 'react-dom'],
-    app: [ 'webpack-dev-server/client?http://localhost:9090',
-    'webpack/hot/only-dev-server',
+    app: [ 'webpack/hot/only-dev-server',
     'react-hot-loader/patch','./index.js']
   },
   output: {

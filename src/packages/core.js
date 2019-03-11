@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import echartsLib from 'echarts/lib/echarts'
 import 'echarts/lib/component/tooltip'
 import 'echarts/lib/component/legend'
-import numerify from 'numerify'
+import ReactResizeDetector from 'react-resize-detector';
 import {
   getType,
   debounce,
@@ -11,7 +11,8 @@ import {
   isArray,
   isObject,
   cloneDeep,
-  isEqual
+  isEqual,
+  isInteger
 } from 'utils-lite'
 
 import Loading from '../components/loading'
@@ -167,13 +168,11 @@ export default class BarChart extends Component{
         resizeHandler: debounce(this.resize, resizeDelay),
         changeHandler: debounce(this.dataHandler, changeDelay)
       })
-      this.addWatchToProps()
+      // this.addWatchToProps()
     }
 
     componentDidMount(){
-        console.log()
         this.init();
-        
     }
 
     componentWillReceiveProps(newProps){
@@ -191,7 +190,7 @@ export default class BarChart extends Component{
         this.resize()
       }
       if(settings != newProps.settings){
-        if (newProps.settings.type && this.chartLib) this.state.chartHandler = this.chartLib[newProps.settings.type]
+        if (newProps.settings.type && this.state.chartLib) this.state.chartHandler = this.state.chartLib[newProps.settings.type]
         this.changeHandler()
       }
       if(events != newProps.events){
@@ -218,16 +217,16 @@ export default class BarChart extends Component{
     }
 
     canvasStyle () {
-      const { width, height } = this.props;
+      const { width = '100%', height } = this.props;
       return {
-          width: 799,
+          width,
           height,
           position: 'relative'
       }
     }
 
     dataHandler = () => {
-        const {chartHandler } = this.state;
+        const { chartHandler } = this.state;
         if (!chartHandler) return
         let data = this.props.data;
         const { echarts, _once } = this.state;
@@ -253,22 +252,9 @@ export default class BarChart extends Component{
         }
     }
 
-    resize = () => {
-        this.echartsResize()
-        // if (!this.cancelResizeCheck) {
-        //   if (this.$el &&
-        //     this.$el.clientWidth &&
-        //     this.$el.clientHeight) {
-        //     this.echartsResize()
-        //   }
-        // } else {
-        //   this.echartsResize()
-        // }
-    }
-
-    echartsResize () { 
+    resize = (width) => {
         const { echarts } = this.state;
-        echarts && echarts.resize() 
+        if(echarts) echarts.resize();
     }
 
     optionsHandler = (options) => {
@@ -351,23 +337,23 @@ export default class BarChart extends Component{
     }
 
     judgeWidthHandler (options) {//????
-        const { widthChangeDelay, resize } = this
-        if (this.$el.clientWidth || this.$el.clientHeight) {
-          resize()
-        } else {
-          this.$nextTick(_ => {
-            if (this.$el.clientWidth || this.$el.clientHeight) {
-              resize()
-            } else {
-              setTimeout(_ => {
-                resize()
-                if (!this.$el.clientWidth || !this.$el.clientHeight) {
-                  console.warn(' Can\'t get dom width or height ')
-                }
-              }, widthChangeDelay)
-            }
-          })
-        }
+        // const { widthChangeDelay, resize } = this
+        // if (this.$el.clientWidth || this.$el.clientHeight) {
+        //   resize()
+        // } else {
+        //   this.$nextTick(_ => {
+        //     if (this.$el.clientWidth || this.$el.clientHeight) {
+        //       resize()
+        //     } else {
+        //       setTimeout(_ => {
+        //         resize()
+        //         if (!this.$el.clientWidth || !this.$el.clientHeight) {
+        //           console.warn(' Can\'t get dom width or height ')
+        //         }
+        //       }, widthChangeDelay)
+        //     }
+        //   })
+        // }
     }
 
     resizeableHandler (resizeable) {
@@ -462,7 +448,9 @@ export default class BarChart extends Component{
 
         return(
             <div className={camelToKebab(name || is)}>
-                <div style={canvasStyle} className={(dataEmpty || loading)?'v-charts-mask-status':''} ref="canvas"></div>
+                <div style={canvasStyle} className={(dataEmpty || loading)?'v-charts-mask-status':''} ref="canvas">
+                  <ReactResizeDetector  handleWidth handleHeight  onResize={this.resize.bind(this)}/>
+                </div>
                 <DataEmpty dataStyle={dataEmpty?"":"none"} />
                 <Loading loadingStyle={loading?"":"none"} /> 
             </div>

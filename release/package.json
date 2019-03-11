@@ -1,6 +1,6 @@
 {
   "name": "ko-charts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "KO CHARTS for React",
   "private": false,
   "main": "lib/index.js",
