@@ -7,6 +7,7 @@
   "module": "es/index.js",
   "scripts": {
     "start": "npm run dev:server",
+    "docs": "docsify serve docs",
     "com:build": "./build/com-build.sh",
     "dev:server": "webpack-dev-server --progress --colors --config ./build/dev-server.js",
     "prod:build": "rm -f -r dist && webpack --bail --progress --profile --config ./build/prod-build.js",
@@ -42,6 +43,7 @@
     "core-js": "^2.5.6",
     "css-loader": "^0.28.7",
     "cz-conventional-changelog": "^2.1.0",
+    "docsify-cli": "^4.3.0",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "file-loader": "^1.1.5",
