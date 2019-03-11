@@ -9,8 +9,8 @@
 
 所有图表都具有的属性，例如 `width`, `events` 等。
 
-```vue
-<ve-line :data="chartData" width="100px" :events="chartEvents"></ve-line>
+```react
+<KoLine :data="chartData" width="100px" :events="chartEvents"></KoLine>
 ```
 
 #### 基本属性
@@ -66,7 +66,6 @@
 | loading | 加载状态 | boolean | false |
 | data-empty | 暂无数据状态 | boolean | false |
 ?> **使用时需先引入样式**
-<br>`import 'v-charts/lib/style.css'`
 
 
 #### 钩子函数

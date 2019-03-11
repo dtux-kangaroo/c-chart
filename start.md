@@ -6,17 +6,22 @@
 -----
 
 ```js
-// main.js
-import Vue from 'vue'
-import VCharts from 'v-charts'
-import App from './App.vue'
+import React, { Component } from 'react';
+import { KoBar,... } from 'ko-charts';
 
-Vue.use(VCharts)
+class App extends Component {
+  constructor(props){
+    super(props)
+  }
 
-new Vue({
-  el: '#app',
-  render: h => h(App)
-})
+  render(){
+    const chartData = [...],chartSetting = [...];
+    
+    return(
+      <KoBar name={'ve-line'} data={chartData} settings={chartSetting} legend-visible={false} tooltip-visible={false} />
+    )
+  }
+}
 ```
 
 ### 按需引入
@@ -24,35 +29,41 @@ new Vue({
 
 v-charts的每种图表组件，都已经单独打包到lib文件夹下了
 ```
-|- lib/
-    |- line.common.js  -------------- 折线图
-    |- bar.common.js  --------------- 条形图
-    |- histogram.common.js  --------- 柱状图
-    |- pie.common.js  --------------- 饼图
-    |- ring.common.js  -------------- 环图
-    |- funnel.common.js  ------------ 漏斗图
-    |- waterfall.common.js  --------- 瀑布图
-    |- radar.common.js  ------------- 雷达图
-    |- map.common.js  --------------- 地图
-    |- sankey.common.js  ------------ 桑基图
-    |- heatmap.common.js  ----------- 热力图
-    |- scatter.common.js  ----------- 散点图
-    |- candle.common.js  ------------ k线图
-    |- gauge.common.js  ------------- 仪表盘
-    |- tree.common.js  -------------- 树图
-    |- bmap.common.js  -------------- 百度地图
-    |- amap.common.js  -------------- 高德地图
+|- lib/package/
+    |- line/index.js  -------------- 折线图
+    |- bar/index.js  --------------- 条形图
+    |- histogram/index.js  --------- 柱状图
+    |- pie/index.js  --------------- 饼图
+    |- ring/index.js  -------------- 环图
+    |- funnel/index.js  ------------ 漏斗图
+    |- waterfall/index.js  --------- 瀑布图
+    |- radar/index.js  ------------- 雷达图
+    |- map/index.js  --------------- 地图
+    |- sankey/index.js  ------------ 桑基图
+    |- heatmap/index.js  ----------- 热力图
+    |- scatter/index.js  ----------- 散点图
+    |- candle/index.js  ------------ k线图
+    |- gauge/index.js  ------------- 仪表盘
+    |- tree/index.js  -------------- 树图
+    |- bmap/index.js  -------------- 百度地图
+    |- amap/index.js  -------------- 高德地图
 ```
 使用时，可以直接将单个图表引入到项目中
 ```js
-import Vue from 'vue'
-import VeLine from 'v-charts/lib/line.common'
-import App from './App.vue'
+import React, { Component } from 'react';
+import KoLine from 'v-charts/lib/package/line';
 
-Vue.component(VeLine.name, VeLine)
+class App extends Component {
+  constructor(props){
+    super(props)
+  }
 
-new Vue({
-  el: '#app',
-  render: h => h(App)
-})
+  render(){
+    const chartData = [...],chartSetting = [...];
+
+    return(
+      <KoLine name={'ve-line'} data={chartData} settings={chartSetting} legend-visible={false} tooltip-visible={false} />
+    )
+  }
+}
 ```
