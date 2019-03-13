@@ -11,3 +11,5 @@ idea/
 compiler_ts/*
 .history/
 true?{\"compact\":false}/
+docs/index.min.js
+docs/style.min.css
